@@ -9,43 +9,81 @@ body {
 header {
     background-color: #333;
     color: #fff;
-    text-align: center;
-    padding: 20px;
+    padding: 30px;
+    font-size: 24px
 }
 
 nav {
-    display: flex;
-    align-items: left;
+    display: inline;
 }
 
 nav h1 {
-    margin: 0;
+    display: inline;
+    align-items: left;
 }
 
-ul {
-    float: left;
-    list-style: none;
-    padding: 0;
+nav ul {
+    list-style-type: disc;
     margin: 0;
-    display: flex;
+    padding: 0;
+    align-items: left;
+}
+
+nav ul li {
+    list-style-type: disc;
+    display: inline;
+    margin-right: 20px;
+    align-items: left;
 }
 
 li {
+    list-style-type: disc;
     margin-right: 10px;
+    display: inline;
 }
 
 nav button {
-    padding: 10px 20px;
     background-color: #333;
     color: #fff;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
+    display: inline;
 }
 
+a#project-link {
+    text-decoration: underline; /* Add underline */
+    color: black; /* Set the color to red */
+    font-weight: bold;   /* Make the text italic */
+}
 
+.back-link {
+    text-decoration: underline; /* Add underline */
+    color: white; /* Set the color to red */
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
 
+}
+.black-link {
+    text-decoration: underline; /* Add underline */
+    color: black; /* Set the color to red */
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
 
+}
+
+.indented-link {
+    margin-left: 20px; /* Adjust the margin value as needed for indentation */
+    
+    color: black;
+}
+.underlined-header {
+    text-decoration: underline;
+}
+.disc-list {
+    list-style-type: disc;
+}
 main {
     max-width: 800px;
     margin: 20px auto;
@@ -55,10 +93,15 @@ main {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+main ul{
+    list-style-type: disc
+}
+
 section {
     margin-bottom: 20px;
     padding: 10px;
 }
+
 
 footer {
     text-align: center;
