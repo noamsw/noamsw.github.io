@@ -8,35 +8,40 @@
     <title>Noam Wolf's Stack</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <h1>Noam Wolf</h1>
-            <ul>
-                <li><a href="projects.html" class="back-link">Projects</a></li>
-            </ul>
+    <header class="header">
+        <h1 class="logo">Noam Wolf.</h1>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="datastructures.html">Data Structures</a>
         </nav>
     </header>
     <main>
-        <section class="datastructures">
-            <h2>Stack – The epitome of a LIFO data structure</h2>
-            <p>The stack is the most classic example of a LIFO – Last In, First Out data structure.<br> The stack is used for many different applications in computer science. 
-                A stack is a one-ended linear DS, that models real world stacks, wherein elements are added and removed to the top of the pile.<br> 
-                This is why it is considered LIFO, the last element added is the first element removed.<br><br>
-                An ADT of stacks commonly includes these five methods:<br>
-                <ul class="disc-list">
-                    <li><strong>push(element)</strong> -  a method which adds a single element to the top of the stack, O(1)<br><br></li>
-                    <li><strong>pop()</strong> -  a method which removes the topmost element from the stack, O(1)<br><br></li>
-                    <li><strong>peek()</strong> - a method which returns the topmost element of the stack, without removal, O(1)<br><br></li>
-                    <li><strong>size()</strong> – a method which returns the number of elements currently in the stack, O(1)<br><br></li>
-                    <li>My implementation uses a linked list and therefore the size of the stack can grow dynamically as we add more elements.<br></li>
-                    <li>However, many basic implementations use arrays, and therefore have a predetermined size.<br> </li>
-                    <li>Therefore it is common to have another method, which lets the user know if the stack is full or not:<br><br></li>
-                    <li><strong>isFull()</strong> -  a method which returns true if the stack is filled to capacity, O(1)<br><br></li>
-                </ul>
-                <br>
-                The following link includes my implementation of a stack in cpp, including a header file, a source file and a small test file:
-                <a href="implementation.zip" download>implementation.zip</a>
-            </p>
+        <section class="structures">
+            <div class="structures-content">
+                <h2>Stack</h2>
+                <h3>The epitome of a LIFO data structure</p>
+                <p>The stack is the most classic example of a LIFO – Last In, First Out data structure.<br> The stack is used for many different applications in computer science. 
+                    A stack is a one-ended linear DS, that models real world stacks, wherein elements are added and removed to the top of the pile.<br> 
+                    This is why it is considered LIFO, the last element added is the first element removed.
+                    An ADT of Stack commonly includes these five methods:
+                    <ul class="disc-list">
+                        <li><strong>push(element)</strong> -  a method which adds a single element to the top of the stack, O(1)<br><br></li>
+                        <li><strong>pop()</strong> -  a method which removes the topmost element from the stack, O(1)<br><br></li>
+                        <li><strong>peek()</strong> - a method which returns the topmost element of the stack, without removal, O(1)<br><br></li>
+                        <li><strong>size()</strong> – a method which returns the number of elements currently in the stack, O(1)<br><br></li>
+                        My implementation uses a linked list and therefore the size of the stack can grow dynamically as we add more elements.<br>
+                        However, many basic implementations use arrays, and therefore have a predetermined size.<br>
+                        Therefore it is common to have another method, which lets the user know if the stack is full or not:<br><br>
+                        <li><strong>isFull()</strong> -  a method which returns true if the stack is filled to capacity, O(1)<br><br></li>
+                    </ul>
+                    <br>
+                    The following link includes my implementation of a stack in cpp, including a header file, a source file and a small test file:
+                </p>
+                <div class="str-btn-box">
+                    <a href="implementation.zip" download>implementation.zip</a>
+                </div>
+            </div>
         </section>
     </main>
 </body>

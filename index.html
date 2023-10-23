@@ -7,33 +7,36 @@
     <title>Noam Wolf's Website</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <h1>Noam Wolf</h1>
-            <!-- <ul>
-                <li><button id="aboutButton">About</button></li>
-                <li><button id="projectsButton">Projects</button></li>
-                <li><button id="blogButton">Blog</button></li>
-            </ul> -->
+    <header class="header">
+        <h1 class="logo">Noam Wolf.</h1>
+        <nav class="navbar">
+            <a href="#" class="active">Home</a>
+            <a href="projects.html">Projects</a>
+            <!-- <a href="#blog">Blog</a> -->
             <!-- <img src="./profile.jpg" alt="Noam Wolfs Profile" height="128" width="128"> -->
         </nav>
     </header>
     <main>
-        <section class="about">
-            <h2>About Me</h2>
-            <p>Hey, I am a young computer science graduate who is excited to start his career
-                 in computer science. I worked at Intel during my time as a student, developing
-                  and improving infrastructure for their design team’s flow.
-                   I am a quick learner who loves a challenge and works well on a team.</p>
+        <section class="home">
+            <div class="home-content">
+                <h2>Hi, I'm Noam Wolf</h2>
+                <p>I am a young computer science graduate who is excited to start his career
+                     in computer science. I worked at Intel during my time as a student, developing
+                      and improving infrastructure for their design team’s flow.
+                       I am a quick learner who loves a challenge and works well on a team.<br><br></p> 
+                <div class="btn-box">
+                    <a href="projects.html">My Projects</a>
+                </div>
+            </div>
         </section>
-        <section class="projects">
+        <!-- <section id="projects">
             <h2><a href="projects.html" id="project-link">Projects</a></h2>
             <p>My other projects, besides this website in itself</p>
-        </section>
-        <section class="blog">
+        </section> -->
+        <!-- <section id="blog">
             <h2>Blog</h2>
             <p>To Be Continued</p>
-        </section>
+        </section> -->
     </main>
     <script src="script.js"></script>
 </body>
