@@ -61,6 +61,7 @@ a#project-link {
 }
 
 .home-content h2 {
+    color: #09c8f8;
     font-size: 56px;
     font-weight: 700;
 }
@@ -87,12 +88,13 @@ a#project-link {
  }
  
  .projects-content{
-     max-width: 600px;
+    max-width: 600px;
  }
  
  .projects-content h2 {
-     font-size: 56px;
-     font-weight: 700;
+    color: #09c8f8;
+    font-size: 56px;
+    font-weight: 700;
  }
  
  .projects-content p {
