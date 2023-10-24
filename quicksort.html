@@ -1,0 +1,79 @@
+<!-- projects.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Noam Wolf's Quick Sort</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="logo">Noam Wolf.</h1>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="sortingalogrithms.html">Sorting algorithms</a>
+        </nav>
+    </header>
+    <main>
+        <section class="structures">
+            <div class="structures-content">
+                <h2>Quick Sort</h2>
+                <h3>A Divide and Conquer sorting algorithm</p>
+                <p>The principal action of Quick Sort is to choose an element in the array to act as a Pivot, and to then partition the array into two parts, placing all the elements that are larger than the pivot in one partition, and all the elements that are smaller than the pivot in another. After this, the pivot will be in its correct position in the final order. <br>
+                    The process is then repeated for both partitions, until the array is sorted.<br> 
+                    There are many different ways to select the partition, including first, last or random. 
+                    
+                </p>
+                <h3>Time Complexity Analysis</h3>
+                <p>
+                    <strong>
+                        In order to analyze the time complexity in depth, we will denote the following two formulas: <br><br>
+                        T(K) -  the time it takes to Quick Sort K elements <br>
+                        M(K) - the time it takes to find the position of a pivot from K elements<br><br>
+                        There are three different options to examine: Best case, Worst Case, and Average Case. <br><br>
+                        Best Case:<br>
+                        The Best case is when the partition splits the array into two even sub arrays<br>
+                        In this case, we will split the array into two sub arrays of K/2 elements, and then merge them.<br>
+                        Let us further note that the time it takes to calculate the mean of K numbers is a constant times K.<br> 
+                        Therefore we get:<br>
+                        T(N) = 2 * T(N/2) + M(N) = 2 * T(N/2) + C * N <br><br>
+                        We can simplify T(N/2) to get: <br>
+                        T(N) = 2 * [2 * T(N/4) + C * N/2] + C * N =  4 * T(N/4) + 2 * C * N<br><br>
+                        If we do this K times:<br>
+                        = … =  2<sup>K</sup>  * T(N/ 2<sup>K</sup>) + K * C * N<br><br>
+                        We can continue to divide the elements until we are left with one element, i.e. when:<br>
+                        N/ 2<sup>K</sup> = 1, or K = log<sub>2</sub>(N)<br><br>
+                        Therefore we get:<br>
+                        Time complexity is O(N * log<sub>2</sub>(N) )<br><br>
+                        Worst Case:<br>
+                        The worst case is when the pivot results in a highly unbalanced partition.<br> 
+                        For instance if we choose the largest element in an already order array.<br>
+                        In this case we get the following result:<br><br>
+                        T(N) = T(N – 1) + N * C<br>
+                        = T(N – 2) + (N – 1) * constant + N * constant =<br>
+                        T(N – 2) + 2 * N * constant – constant<br>
+                        = T(N – 3) + 3 * N * constant – 2 * constant – constant<br>
+                        . . .<br>
+                        = T(N – k) + k * N * constant – (k – 1) * constant – . . . – 2*constant – constant<br>
+                        = T(N – k) + k * N * constant – constant * (k*(k – 1))/2<br>
+                        Let us put k = N in the equation:<br>
+                        T(N)  = T(0) + N * N * constant – constant * N * (N-1) /2<br>
+                        Given T(0) = 0 we get:<br>
+                        T(N) = constant * N<sup>2</sup> / 2 + constant * N<br>
+                        And the time complexity is O(N^2)<br><br>
+                        Average time complexity is O(N * log(N))<br>
+                        I will not prove it<br>
+                        The following link includes my implementation of Quick Sort in cpp:
+                    </strong>
+
+                </p>
+                <div class="str-btn-box">
+                    <a href="quicksort.zip" download>quick.zip</a>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
