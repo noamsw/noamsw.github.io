@@ -23,8 +23,36 @@
                 <h3>Divide and Conquer</p>
                 <p>In Merge Sort, we divide the array into two halves, sort each half and then merge the sorted arrays together.<br>
                     This process is repeated until the whole array is sorted.<br> 
-                    The complexity of this algorithm is O(<strong>N</strong> log(<strong>N</strong>)), and is used for sorting large data sets.<br> 
-                    The following link includes my implementation of Merge Sort in cpp:
+                    The complexity of this algorithm is O(<strong>N</strong> log(<strong>N</strong>)), and is used for sorting large data sets.<br><br>
+
+                </p>
+                <h3>Time Complexity Analysis</h3>
+                <p>
+                    <strong>
+                        In order to analyze the time complexity in depth, we will denote the following two formulas: <br><br>
+                        T(K) -  the time it takes to order K elements <br>
+                        M(K) -  the time it takes to merge K elements <br><br>
+                        Lets us note, that the time it takes to order K elements, is the time it takes to order two sub arrays of K/2 elements, and then merge them. Let us further note that the time it takes to merge K elements, is at most some constant number times K, as we simply must go over the elements in order to merge them.<br>
+                        Therefore we get:<br><br>
+                        M(K) = C * K &nbsp i.e. some constant C times K<br>
+                        and the following formula for ordering :<br>
+                        T(N) = 2 * T(N/2) + M(N) = 2 * T(N/2) + C * N <br><br>
+                        We can simplify T(N/2) to get: <br>
+                        T(N) = 2 * [2 * T(N/4) + C * N/2] + C * N =  4 * T(N/4) + 2 * C * N<br><br>
+                        If we do this K times:<br>
+                        = … =  2<sup>K</sup>  * T(N/ 2<sup>K</sup>) + K * C * N<br><br>
+                        We can continue to divide the elements until we are left with one element, i.e. when:<br>
+                        N/ 2<sup>K</sup> = 1, or K = log<sub>2</sub>(N)<br><br>
+                        Therefore we get:<br>
+                        T(N) = N * T(1) + log<sub>2</sub>(N) * C * N <br>
+                        as we know that T(1) = 1, we further simplify<br>
+                        T(N) = N + log<sub>2</sub>(N) * C * N <br><br>
+                        And so we get:<br>
+                        Time complexity is O(N * log<sub>2</sub>(N) )<br>
+                        Space copmlexity is trivially: O(N)<br><br>
+                        The following link includes my implementation of Merge Sort in cpp:
+                    </strong>
+
                 </p>
                 <div class="str-btn-box">
                     <a href="mergesort.zip" download>merge.zip</a>
