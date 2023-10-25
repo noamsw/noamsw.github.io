@@ -1,0 +1,54 @@
+<!-- projects.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Noam Wolf's Radix Sort</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="logo">Noam Wolf.</h1>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="sortingalogrithms.html">Sorting algorithms</a>
+        </nav>
+    </header>
+    <main>
+        <section class="structures">
+            <div class="structures-content">
+                <h2>Quick Sort</h2>
+                <h3>A linear sorting algorithm</p>
+                <p>Radix sort sorts elements digit by digit, and can be used to sort positive integers or fixed length strings.<br>
+                    Radix sort sorts the elements iteratively from least significant to most significant.<br>
+                    When the order is tied, the prior order is maintained.<br>
+                    Once you complete the ordering of all digits, you have sorted the elements. 
+                    
+                </p>
+                <h3>Time Complexity Analysis</h3>
+                <p>
+                    <strong>
+                        Let us denote the following variables:: <br><br>
+                        n - the number of elements to be sorted.<br>
+                        k - the number of digits in the maximum number (the number of passes).<br>
+                        b - the base (usually 10 for decimal numbers)
+                        <br>
+                        In order to sort the digits we use counting sort.<br>
+                        Counting sort is known to have a time complexity of n + b for n elements in base b.<br>
+                        In radix sort we go over the numbers one digit at a time, therefore we will have to go over the numbers K times.<br>
+                        Therefore the time complexity is O(k * (n + b)).<br><br>
+
+                        The following link includes my implementation of Quick Sort for base 10 in cpp:
+                    </strong>
+
+                </p>
+                <div class="str-btn-box">
+                    <a href="quicksort.zip" download>quick.zip</a>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
